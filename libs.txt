@@ -1,0 +1,2 @@
+import nashpy 
+import numpy 
