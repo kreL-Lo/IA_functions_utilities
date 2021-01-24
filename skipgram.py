@@ -4,9 +4,9 @@ import math
 # se baga nr de aparitii
 words =['beef','cabage','parsley']
 matrix_doc =[
-    [1,4,0],
-    [3,0,0],
-    [2,1,2]
+    [1,0,0],
+    [0,1,2],
+    [1,6,1]
 ]
 
 matrix = np.array(matrix_doc)
@@ -14,7 +14,7 @@ matrix = np.array(matrix_doc)
 d = matrix[0]+matrix[1]
 
 def cosine(table,row1,row2):
-    sum1 = sum(table[row1]+table[row2])
+    sum1 = sum(table[row1]*table[row2])
     prod_sqr_A =math.sqrt(sum(i *i for i in table[row1]))
     prod_sqr_B = math.sqrt(sum(i *i for i in table[row2]))
     return sum1/(prod_sqr_A*prod_sqr_B)
